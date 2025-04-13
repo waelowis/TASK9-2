@@ -9,9 +9,9 @@
         this.Balance = balance;
     }
 
-    public bool Deposit(double amount)
+    public virtual bool Deposit(double amount)
     {
-        if (amount < 0)
+        if (amount <= 0)
             return false;
         else
         {
@@ -20,7 +20,7 @@
         }
     }
 
-    public bool Withdraw(double amount)
+    public virtual bool Withdraw(double amount)
     {
         if (Balance - amount >= 0)
         {

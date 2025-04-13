@@ -1,4 +1,5 @@
-﻿class Program
+﻿using TASK9_2;
+class Program
 {
     static void Main()
     {
