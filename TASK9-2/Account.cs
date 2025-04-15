@@ -22,14 +22,17 @@
 
     public virtual bool Withdraw(double amount)
     {
-        if (Balance - amount >= 0)
-        {
-            Balance -= amount;
-            return true;
-        }
-        else
-        {
+        if (amount <= 0 || Balance - amount < 0)
             return false;
-        }
+
+        Balance -= amount;
+        return true;
     }
+
+
+    public override string ToString()
+    {
+        return $"Account Name: {Name}, Balance: {Balance:F2}";
+    }
+
 }
